@@ -5,56 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back01"
-    tools:context=".LoginActivity">
-    
+    tools:context=".activities.LoginActivity">
+
     <RelativeLayout
-        android:id="@+id/toolBarRl"
+        android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:background="@drawable/shape_toolbar01">
 
-    <ImageView
-        android:id="@+id/iconIv"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/logo"
-        />
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/logo"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/iconIv"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="Please Login"
-        android:textColor="@color/white"
-        android:fontFamily="sans-serif-condensed"
-        android:textSize="28sp"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconIv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Please Login"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="28sp"/>
 
     </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="30dp"
-        android:layout_above="@id/noAccountTv"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="225dp" >
-    
+        android:layout_above="@id/noAccountTv"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="225dp">
+
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
-            <!-- Email-->
+            <!--Email-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/emailTit"
+                android:id="@+id/emailTil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 app:hintEnabled="false">
+
 
                 <EditText
                     android:id="@+id/emailEt"
@@ -67,19 +66,21 @@
                     android:inputType="textEmailAddress"
                     android:padding="10dp"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/gray01" />
+                    android:textColorHint="@color/gray01"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Password -->
+
+            <!--Password-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/passwordTit"
+                android:id="@+id/passwordTil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/emailTit"
+                android:layout_below="@id/emailTil"
                 android:layout_marginTop="5dp"
                 app:passwordToggleEnabled="true"
                 app:hintEnabled="false">
+
 
                 <EditText
                     android:id="@+id/passwordEt"
@@ -92,7 +93,7 @@
                     android:inputType="textPassword"
                     android:padding="10dp"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/gray01" />
+                    android:textColorHint="@color/gray01"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -101,31 +102,31 @@
                 android:id="@+id/forgotTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/passwordTit"
+                android:layout_below="@id/passwordTil"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
                 android:text="Forgot Password?"
                 android:textColor="@color/gray02" />
 
-<!--            Login Button-->
+            <!--Login Button-->
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/forgotTv"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/shape_button01"
                 android:text="Login"
-                android:textColor="@color/white"
-                />
+                android:textColor="@color/white"/>
 
-        
+
         </RelativeLayout>
 
     </ScrollView>
 
-<!--    No Account, Register-->
+
+    <!--No Account, Register-->
     <TextView
         android:id="@+id/noAccountTv"
         android:layout_width="wrap_content"
@@ -134,6 +135,6 @@
         android:layout_centerHorizontal="true"
         android:padding="10dp"
         android:text="@string/new_user_signup"
-        android:textColor="@color/black"
-        />
+        android:textColor="@color/black"/>
+
 </RelativeLayout>
